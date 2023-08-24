@@ -2,6 +2,8 @@ import random
 import requests
 import time
 print('one more time')
+print('и еще раз')
+print('добавил третий файл')
 
 API_URL: str = 'https://api.telegram.org/bot'
 BOT_TOKEN: str = '11111'
