@@ -3,7 +3,7 @@ import time
 
 
 API_URL: str = 'https://api.telegram.org/bot'
-BOT_TOKEN: str = '6475754729:AAFNddgHy0Y0BKnV1_gzrkkWFCjq1JONtq0'
+BOT_TOKEN: str = '11111'
 # TEXT: str = input()
 MAX_COUNTER: int = 100
 
