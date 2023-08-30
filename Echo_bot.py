@@ -32,6 +32,8 @@ async def process_start_command(message: Message):
     else:
         users[message.from_user.id]['in_game'] = True
         users[message.from_user.id]['total_games'] += 1
+    print(message.from_user.first_name)
+    print(message.from_user.last_name)
 
 
 @dp.message(Command(commands=['help']))
@@ -73,8 +75,9 @@ async def send_sticker_echo(message: Message):
     if users[message.from_user.id]['in_game']:
         await message.answer_sticker(message.sticker.file_id)
         users[message.from_user.id]['total_messages'] += 1
-    await message.answer('You are not in game. \n'
-                         'Please, press /start')
+    else:
+        await message.answer('You are not in game. \n'
+                             'Please, press /start')
 
 dp.message.register(send_sticker_echo, F.sticker)
 
